@@ -11,9 +11,6 @@
 		7A062FAA2BFA87D0000D307F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A062FA92BFA87D0000D307F /* ContentView.swift */; };
 		7A062FAC2BFA87D2000D307F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A062FAB2BFA87D2000D307F /* Assets.xcassets */; };
 		7A062FB02BFA87D2000D307F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A062FAF2BFA87D2000D307F /* Preview Assets.xcassets */; };
-		7A062FBA2BFA87D2000D307F /* SwingDetectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A062FB92BFA87D2000D307F /* SwingDetectTests.swift */; };
-		7A062FC42BFA87D2000D307F /* SwingDetectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A062FC32BFA87D2000D307F /* SwingDetectUITests.swift */; };
-		7A062FC62BFA87D2000D307F /* SwingDetectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A062FC52BFA87D2000D307F /* SwingDetectUITestsLaunchTests.swift */; };
 		7A062FD62BFA8955000D307F /* SensorsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A062FD52BFA8955000D307F /* SensorsData.swift */; };
 		7A062FD82BFA8BEE000D307F /* SegmentationSwing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A062FD72BFA8BEE000D307F /* SegmentationSwing.swift */; };
 /* End PBXBuildFile section */
@@ -43,10 +40,7 @@
 		7A062FAD2BFA87D2000D307F /* SwingDetect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwingDetect.entitlements; sourceTree = "<group>"; };
 		7A062FAF2BFA87D2000D307F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7A062FB52BFA87D2000D307F /* SwingDetectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwingDetectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A062FB92BFA87D2000D307F /* SwingDetectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwingDetectTests.swift; sourceTree = "<group>"; };
 		7A062FBF2BFA87D2000D307F /* SwingDetectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwingDetectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A062FC32BFA87D2000D307F /* SwingDetectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwingDetectUITests.swift; sourceTree = "<group>"; };
-		7A062FC52BFA87D2000D307F /* SwingDetectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwingDetectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7A062FD52BFA8955000D307F /* SensorsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorsData.swift; sourceTree = "<group>"; };
 		7A062FD72BFA8BEE000D307F /* SegmentationSwing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentationSwing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,8 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				7A062FA62BFA87D0000D307F /* SwingDetect */,
-				7A062FB82BFA87D2000D307F /* SwingDetectTests */,
-				7A062FC22BFA87D2000D307F /* SwingDetectUITests */,
 				7A062FA52BFA87D0000D307F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,23 +107,6 @@
 				7A062FAF2BFA87D2000D307F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		7A062FB82BFA87D2000D307F /* SwingDetectTests */ = {
-			isa = PBXGroup;
-			children = (
-				7A062FB92BFA87D2000D307F /* SwingDetectTests.swift */,
-			);
-			path = SwingDetectTests;
-			sourceTree = "<group>";
-		};
-		7A062FC22BFA87D2000D307F /* SwingDetectUITests */ = {
-			isa = PBXGroup;
-			children = (
-				7A062FC32BFA87D2000D307F /* SwingDetectUITests.swift */,
-				7A062FC52BFA87D2000D307F /* SwingDetectUITestsLaunchTests.swift */,
-			);
-			path = SwingDetectUITests;
 			sourceTree = "<group>";
 		};
 		7A062FD22BFA8889000D307F /* SensorsSwing */ = {
@@ -284,7 +259,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A062FBA2BFA87D2000D307F /* SwingDetectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,8 +266,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A062FC62BFA87D2000D307F /* SwingDetectUITestsLaunchTests.swift in Sources */,
-				7A062FC42BFA87D2000D307F /* SwingDetectUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
