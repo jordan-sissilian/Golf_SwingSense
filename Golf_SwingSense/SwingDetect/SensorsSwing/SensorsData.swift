@@ -8,9 +8,9 @@ class SensorsData: ObservableObject {
     @Published var acceleration: CMAcceleration = CMAcceleration(x: 0, y: 0, z: 0)
     @Published var magneticField: CMMagneticField = CMMagneticField(x: 0, y: 0, z: 0)
 
-    var posData: (pitch: Double, roll: Double, yaw: Double) = (0, 0, 0)
+    var posData: (x: Double, y: Double, z: Double) = (0, 0, 0)
     var gyroData: (pitch: Double, roll: Double, yaw: Double) = (0, 0, 0)
-    var accelerometerData: (x: Double, y: Double, z: Double, speed: Double) = (0, 0, 0, 0)
+    var accelerometerData: (x: Double, y: Double, z: Double, speed: (speedX: Double, speedY: Double, speedZ: Double)) = (0, 0, 0, (0, 0, 0))
     var magnetometerData: (x: Double, y: Double, z: Double) = (0, 0, 0)
 
     init() {
@@ -41,21 +41,34 @@ class SensorsData: ObservableObject {
                        guard let self = self, let data = data else { return }
                        DispatchQueue.main.async {
                            self.acceleration = data.acceleration
-                           
-                           self.accelerometerData = (x: data.acceleration.x, y: data.acceleration.y, z: data.acceleration.z, 0)
+
+                           self.accelerometerData = (x: data.acceleration.x, y: data.acceleration.y, z: data.acceleration.z, (0, 0, 0))
 
                            let accelerationThreshold = 1.0
                            if abs(data.acceleration.x) > accelerationThreshold ||
                               abs(data.acceleration.y) > accelerationThreshold ||
                               abs(data.acceleration.z) > accelerationThreshold {
 
+                               // Calculez la magnitude de l'accélération
                                let magnitude = sqrt(pow(data.acceleration.x, 2) + pow(data.acceleration.y, 2) + pow(data.acceleration.z, 2))
-                               self.accelerometerData.speed = (magnitude * 9.81) - 9.81 // Convertir en m/s²
+
+                               // Vérifiez si la magnitude est non nulle pour éviter une division par zéro
+                               guard magnitude != 0 else {
+                                   return
+                               }
+
+                               // Calculez les composantes de vitesse dans les directions X, Y et Z en multipliant chaque composante d'accélération par la magnitude
+                               let speedX = data.acceleration.x * magnitude
+                               let speedY = data.acceleration.y * magnitude
+                               let speedZ = data.acceleration.z * magnitude
+
+                               // Mettez à jour les valeurs de speedX, speedY et speedZ dans accelerometerData.speed
+                               self.accelerometerData.speed = (speedX: speedX, speedY: speedY, speedZ: speedZ)
 
                            } else {
-                               self.accelerometerData.speed = 0
+                               self.accelerometerData.speed = (0, 0, 0)
                            }
-
+                           self.estimatePosition()
                            self.printDat()
                        }
                    }
@@ -67,27 +80,40 @@ class SensorsData: ObservableObject {
                 guard let self = self, let data = data else { return }
                 DispatchQueue.main.async {
                     self.magneticField = data.magneticField
+                    self.magnetometerData = (self.magneticField.x, self.magneticField.y, self.magneticField.z)
                 }
             }
         }
     }
     
+
+    func estimatePosition() {
+        // Estimer l'orientation à partir des données du gyroscope
+        let pitch = gyroData.pitch
+        let roll = gyroData.roll
+        let yaw = gyroData.yaw
+
+        // Intégrer la vitesse pour obtenir la position
+        let positionX = accelerometerData.x
+        let positionY = accelerometerData.y
+        let positionZ = accelerometerData.z
+        
+        // Transformer les changements de position relatifs en position absolue dans l'espace en fonction de l'orientation
+        let absolutePositionX = positionX * cos(roll) * cos(pitch) + positionY * (cos(roll) * sin(pitch) * sin(yaw) - sin(roll) * cos(yaw)) + positionZ * (cos(roll) * sin(pitch) * cos(yaw) + sin(roll) * sin(yaw))
+        let absolutePositionY = positionX * sin(roll) * cos(pitch) + positionY * (sin(roll) * sin(pitch) * sin(yaw) + cos(roll) * cos(yaw)) + positionZ * (sin(roll) * sin(pitch) * cos(yaw) - cos(roll) * sin(yaw))
+        let absolutePositionZ = positionX * -sin(pitch) + positionY * cos(pitch) * sin(yaw) + positionZ * cos(pitch) * cos(yaw)
+        
+        self.posData = (absolutePositionX, absolutePositionY, absolutePositionZ)
+    }
+    
     func printDat() {
-        print(String(format: "%.2f", self.accelerometerData.speed))
+        print("\(String(format: "%.1f", posData.x)) \(String(format: "%.1f", posData.y)) \(String(format: "%.1f", posData.z))")
     }
 
     func stopUpdates() {
         motionManager.stopAccelerometerUpdates()
         motionManager.stopGyroUpdates()
         motionManager.stopMagnetometerUpdates()
-    }
-
-    func hasGyroMovedSignificantly(previousRotationRate: CMRotationRate) -> Bool {
-        let threshold = 0.01
-        let deltaX = abs(rotationRate.x - previousRotationRate.x)
-        let deltaY = abs(rotationRate.y - previousRotationRate.y)
-        let deltaZ = abs(rotationRate.z - previousRotationRate.z)
-        return deltaX > threshold || deltaY > threshold || deltaZ > threshold
     }
     
 }
