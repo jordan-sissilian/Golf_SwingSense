@@ -70,6 +70,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		173FD7222BFACF2000C599CF /* Front */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Front;
+			sourceTree = "<group>";
+		};
 		7A062F9B2BFA87D0000D307F = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +98,7 @@
 		7A062FA62BFA87D0000D307F /* SwingDetect */ = {
 			isa = PBXGroup;
 			children = (
+				173FD7222BFACF2000C599CF /* Front */,
 				7A062FD22BFA8889000D307F /* SensorsSwing */,
 				7A062FA72BFA87D0000D307F /* SwingDetectApp.swift */,
 				7A062FA92BFA87D0000D307F /* ContentView.swift */,
