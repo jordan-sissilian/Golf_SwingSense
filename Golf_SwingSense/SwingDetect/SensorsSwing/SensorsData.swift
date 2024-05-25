@@ -52,39 +52,53 @@ class SensorsData: ObservableObject {
             isBackswingDetected = false
         }
     }
-    
+
     private func detectOrientation() {
-        let threshold: Double = 0.8
-        let lowerThreshold: Double = 0.2
         
-        if acceleration.z > threshold {
-            orientation = "Face Up"
-            print(acceleration.z, "Face Up")
-        } else if acceleration.z < -threshold {
-            orientation = "Face Down"
-            print(acceleration.z, "Face Down")
-        } else if acceleration.y > threshold {
-            orientation = "Standing on Bottom Edge"
-            print(acceleration.y, "Standing on Bottom Edge")
-        } else if acceleration.y < -threshold {
-            orientation = "Standing on Top Edge"
-            print(acceleration.y, "Standing on Top Edge")
-        } else if acceleration.x > threshold {
-            orientation = "Standing on Right Edge"
-            print(acceleration.x, "Standing on Right Edge")
-        } else if acceleration.x < -threshold {
-            orientation = "Standing on Left Edge"
-            print(acceleration.x, "Standing on Left Edge")
-        } else if acceleration.x < -lowerThreshold && acceleration.y > lowerThreshold {
+        let seuil: Double = 0.8
+        let seuilInferieur: Double = 0.2
+    
+        print("\n\n\n\n")
+        print("Début de la détection de l'orientation")
+        print("Valeurs de l'accélération - x: \(String(format: "%.4f", acceleration.x)), y: \(String(format: "%.4f", acceleration.y)), z: \(String(format: "%.4f", acceleration.z))")
+        print("Seuils - seuil: \(String(format: "%.2f", seuil)), seuilInferieur: \(String(format: "%.2f", seuilInferieur))")
+        
+        if acceleration.z > seuil {
+            orientation = "Face vers le haut"
+            print("Condition: l'accélération z est supérieure au seuil")
+            print("Orientation détectée: \(orientation)")
+        } else if acceleration.z < -seuil {
+            orientation = "Face vers le bas"
+            print("Condition: l'accélération z est inférieure au seuil négatif")
+            print("Orientation détectée: \(orientation)")
+        } else if acceleration.y > seuil {
+            orientation = "En équilibre sur le bord inférieur"
+            print("Condition: l'accélération y est supérieure au seuil")
+            print("Orientation détectée: \(orientation)")
+        } else if acceleration.y < -seuil {
+            orientation = "En équilibre sur le bord supérieur"
+            print("Condition: l'accélération y est inférieure au seuil négatif")
+            print("Orientation détectée: \(orientation)")
+        } else if acceleration.x > seuil {
+            orientation = "En équilibre sur le bord droit"
+            print("Condition: l'accélération x est supérieure au seuil")
+            print("Orientation détectée: \(orientation)")
+        } else if acceleration.x < -seuil {
+            orientation = "En équilibre sur le bord gauche"
+            print("Condition: l'accélération x est inférieure au seuil négatif")
+            print("Orientation détectée: \(orientation)")
+        } else if acceleration.x < -seuilInferieur && acceleration.y > seuilInferieur {
             orientation = "Position SWINGG"
-            print(acceleration.x, acceleration.y, "Position SWINGG")
+            print("Condition: l'accélération x est inférieure au seuil négatif et l'accélération y est supérieure au seuil inférieur")
+            print("Orientation détectée: \(orientation)")
         } else {
-            orientation = "Unknown"
-            print(acceleration.z, "Unknown")
+            orientation = "Inconnue"
+            print("Aucune des conditions précédentes n'a été remplie")
+            print("Orientation détectée: \(orientation)")
         }
         
-        // Check if phone is upside down
-        isPhoneUpsideDown = acceleration.z < -threshold
+        isPhoneUpsideDown = acceleration.z < -seuil
+        print("Le téléphone est-il retourné: \(isPhoneUpsideDown ? "oui" : "non")")
     }
     
     func stopUpdates() {
