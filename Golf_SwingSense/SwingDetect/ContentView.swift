@@ -12,17 +12,29 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Text("Accelerometer Data")
-                .font(.largeTitle)
-                .padding()
-            Text("X: \(motionManager.acceleration.x, specifier: "%.2f")")
-            Text("Y: \(motionManager.acceleration.y, specifier: "%.2f")")
-            Text("Z: \(motionManager.acceleration.z, specifier: "%.2f")")
+            VStack {
+                Text("Gyro Data")
+                    .font(.largeTitle)
+                    .padding()
+                Text("X: \(String(format: "%.1f", motionManager.rotationRate.x)), Y: \(String(format: "%.1f", motionManager.rotationRate.y)), Z: \(String(format: "%.1f", motionManager.rotationRate.z))")
+                Text("pitch: \(motionManager.gyroData.pitch, specifier: "%.1f")")
+                Text("yaw: \(motionManager.gyroData.roll, specifier: "%.1f")")
+                Text("row: \(motionManager.gyroData.yaw, specifier: "%.1f")")
+                Button("Reset") {
+                    motionManager.gyroData = (0, 0, 0)
+                }
+            }
 
-            Text("Backswing Detected:" + (motionManager.isBackswingDetected ? "Yes" : "No"))
-                .font(.title)
-                .foregroundColor(motionManager.isBackswingDetected ? .green : .red)
-                .padding()
+            VStack {
+                Text("Accelerometer Data")
+                    .font(.largeTitle)
+                    .padding()
+                let magnitude = sqrt(pow(motionManager.accelerometerData.x, 2) + pow(motionManager.accelerometerData.y, 2) + pow(motionManager.accelerometerData.z, 2))
+                Text("X: \(String(format: "%.1f", motionManager.accelerometerData.x)), Y: \(String(format: "%.1f", motionManager.accelerometerData.y)), Z: \(String(format: "%.1f", motionManager.accelerometerData.z))")
+                Text("Magnitude: \(String(format: "%.1f", magnitude)) g")
+                Text("Speed: \(String(format: "%.1f", motionManager.accelerometerData.speed))")
+            }
+
         }
         .padding()
         .onAppear(){
