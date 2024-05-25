@@ -54,29 +54,38 @@ class SensorsData: ObservableObject {
     }
     
     private func detectOrientation() {
-         let threshold: Double = 0.8
-         
-         if acceleration.z > threshold {
-             print(acceleration.z, "Face Up")
-         } else if acceleration.z < -threshold {
-             print(acceleration.z, "Face Down")
-         } else if acceleration.y > threshold {
-             print(acceleration.z, "Standing on Bottom Edge")
-         } else if acceleration.y < -threshold {
-             print(acceleration.z, "Standing on Top Edge")
-         } else if acceleration.x > threshold {
-             print(acceleration.z, "Standing on Right Edge")
-         } else if acceleration.x < -threshold {
-             print(acceleration.z, "Standing on Left Edge")
-         } else if acceleration.x > -threshold{
-             print("position SWINGG")
-         } else {
-             print(acceleration.z, "Unknown")
-         }
-         
-         // Check if phone is upside down
-         isPhoneUpsideDown = acceleration.z < -threshold
-     }
+        let threshold: Double = 0.8
+        let lowerThreshold: Double = 0.2
+        
+        if acceleration.z > threshold {
+            orientation = "Face Up"
+            print(acceleration.z, "Face Up")
+        } else if acceleration.z < -threshold {
+            orientation = "Face Down"
+            print(acceleration.z, "Face Down")
+        } else if acceleration.y > threshold {
+            orientation = "Standing on Bottom Edge"
+            print(acceleration.y, "Standing on Bottom Edge")
+        } else if acceleration.y < -threshold {
+            orientation = "Standing on Top Edge"
+            print(acceleration.y, "Standing on Top Edge")
+        } else if acceleration.x > threshold {
+            orientation = "Standing on Right Edge"
+            print(acceleration.x, "Standing on Right Edge")
+        } else if acceleration.x < -threshold {
+            orientation = "Standing on Left Edge"
+            print(acceleration.x, "Standing on Left Edge")
+        } else if acceleration.x < -lowerThreshold && acceleration.y > lowerThreshold {
+            orientation = "Position SWINGG"
+            print(acceleration.x, acceleration.y, "Position SWINGG")
+        } else {
+            orientation = "Unknown"
+            print(acceleration.z, "Unknown")
+        }
+        
+        // Check if phone is upside down
+        isPhoneUpsideDown = acceleration.z < -threshold
+    }
     
     func stopUpdates() {
         motionManager.stopAccelerometerUpdates()
