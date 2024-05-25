@@ -9,6 +9,7 @@ class SensorsData: ObservableObject {
 
     @Published var isBackswingDetected: Bool = false // Ajout de la propriété isBackswingDetected
     @Published var isPhoneUpsideDown: Bool = false // Ajout de la propriété isPhoneUpsideDown
+    @Published var orientation: String = "Unknown" // Ajout de la propriété orientation
 
     init() {
         startUpdates()
@@ -22,18 +23,17 @@ class SensorsData: ObservableObject {
                 DispatchQueue.main.async {
                     self.acceleration = data.acceleration
                     self.checkBackswing()
-                    self.checkOrientation()
+                    self.detectOrientation()
                 }
             }
         }
         
         if motionManager.isGyroAvailable {
             motionManager.gyroUpdateInterval = 1.0 / 60.0  // 60 Hz
-            motionManager.startGyroUpdates(to: .main) { (data, error) in
-                if let data = data {
-                    DispatchQueue.main.async {
-                        self.rotationRate = data.rotationRate
-                    }
+            motionManager.startGyroUpdates(to: .main) { [weak self] (data, error) in
+                guard let self = self, let data = data else { return }
+                DispatchQueue.main.async {
+                    self.rotationRate = data.rotationRate
                 }
             }
         }
@@ -53,19 +53,30 @@ class SensorsData: ObservableObject {
         }
     }
     
-    private func checkOrientation() {
-        let threshold: Double = 25.0 // Ajustez ce seuil selon vos besoins
-        if abs(magneticField.z) > threshold {
-            isPhoneUpsideDown = true
-            print(magneticField.z)
-            print("Téléphone à l'envers")
-        } else {
-            isPhoneUpsideDown = false
-            print(magneticField.z)
-
-            print("Téléphone orienté normalement")
-        }
-    }
+    private func detectOrientation() {
+         let threshold: Double = 0.8
+         
+         if acceleration.z > threshold {
+             print(acceleration.z, "Face Up")
+         } else if acceleration.z < -threshold {
+             print(acceleration.z, "Face Down")
+         } else if acceleration.y > threshold {
+             print(acceleration.z, "Standing on Bottom Edge")
+         } else if acceleration.y < -threshold {
+             print(acceleration.z, "Standing on Top Edge")
+         } else if acceleration.x > threshold {
+             print(acceleration.z, "Standing on Right Edge")
+         } else if acceleration.x < -threshold {
+             print(acceleration.z, "Standing on Left Edge")
+         } else if acceleration.x > -threshold{
+             print("position SWINGG")
+         } else {
+             print(acceleration.z, "Unknown")
+         }
+         
+         // Check if phone is upside down
+         isPhoneUpsideDown = acceleration.z < -threshold
+     }
     
     func stopUpdates() {
         motionManager.stopAccelerometerUpdates()
