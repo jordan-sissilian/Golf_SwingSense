@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct AcceuilView: View {
+    @Binding var showView: Int
 
     var body: some View {
         GeometryReader { geometry in
@@ -97,7 +98,7 @@ struct AcceuilView: View {
                                 Text("lorem ipsum")
                                     .foregroundStyle(.white)
                             }
-                            Spacer()
+                            Spacer().frame(width: 20)
                         }
                         .frame(width: geometry.size.width, height: geometry.size.height * 0.16)
                         HStack {
@@ -159,7 +160,7 @@ struct AcceuilView: View {
                         .padding(.top)
                         Spacer()
                         Button(action: {
-                            // Action du bouton
+                            showView = 2
                         }) {
                             Text("Let's Swing")
                                 .foregroundStyle(.white)

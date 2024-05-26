@@ -1,15 +1,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    //@StateObject private var motionManager = SensorsData()
+    @State private var showView: Int = 2
 
     var body: some View {
         VStack() {
-            AcceuilView()
+            if showView == 1 {
+                AcceuilView(showView: $showView)
+            } else if showView == 2 {
+                SwingView(showView: $showView)
+            }
         }
-        .onAppear() {
-            //motionManager.startUpdates()
-        }
+        
     }
 }
 

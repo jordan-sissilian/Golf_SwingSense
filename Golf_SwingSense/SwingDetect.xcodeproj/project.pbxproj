@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		178537D52C03416200A6B3AC /* AcceuilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178537D42C03416200A6B3AC /* AcceuilView.swift */; };
+		178537D72C039AB100A6B3AC /* SwingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178537D62C039AB100A6B3AC /* SwingView.swift */; };
+		178537DA2C039E5300A6B3AC /* RoundedComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178537D92C039E5300A6B3AC /* RoundedComponent.swift */; };
 		7A062FA82BFA87D0000D307F /* SwingDetectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A062FA72BFA87D0000D307F /* SwingDetectApp.swift */; };
 		7A062FAA2BFA87D0000D307F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A062FA92BFA87D0000D307F /* ContentView.swift */; };
 		7A062FAC2BFA87D2000D307F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A062FAB2BFA87D2000D307F /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		178537D42C03416200A6B3AC /* AcceuilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceuilView.swift; sourceTree = SOURCE_ROOT; };
+		178537D62C039AB100A6B3AC /* SwingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwingView.swift; path = "SwingDetect/Asset Img/SwingView.swift"; sourceTree = SOURCE_ROOT; };
+		178537D92C039E5300A6B3AC /* RoundedComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedComponent.swift; sourceTree = "<group>"; };
 		7A062FA42BFA87D0000D307F /* SwingDetect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwingDetect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A062FA72BFA87D0000D307F /* SwingDetectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwingDetectApp.swift; sourceTree = "<group>"; };
 		7A062FA92BFA87D0000D307F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,8 +78,17 @@
 			isa = PBXGroup;
 			children = (
 				178537D42C03416200A6B3AC /* AcceuilView.swift */,
+				178537D62C039AB100A6B3AC /* SwingView.swift */,
 			);
 			path = Front;
+			sourceTree = "<group>";
+		};
+		178537D82C039E2800A6B3AC /* Componant */ = {
+			isa = PBXGroup;
+			children = (
+				178537D92C039E5300A6B3AC /* RoundedComponent.swift */,
+			);
+			path = Componant;
 			sourceTree = "<group>";
 		};
 		7A062F9B2BFA87D0000D307F = {
@@ -99,6 +112,7 @@
 		7A062FA62BFA87D0000D307F /* SwingDetect */ = {
 			isa = PBXGroup;
 			children = (
+				178537D82C039E2800A6B3AC /* Componant */,
 				173FD7222BFACF2000C599CF /* Front */,
 				7A062FD22BFA8889000D307F /* SensorsSwing */,
 				7A062FA72BFA87D0000D307F /* SwingDetectApp.swift */,
@@ -248,8 +262,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				178537D52C03416200A6B3AC /* AcceuilView.swift in Sources */,
+				178537DA2C039E5300A6B3AC /* RoundedComponent.swift in Sources */,
 				7A062FD82BFA8BEE000D307F /* SegmentationSwing.swift in Sources */,
 				7A062FAA2BFA87D0000D307F /* ContentView.swift in Sources */,
+				178537D72C039AB100A6B3AC /* SwingView.swift in Sources */,
 				7A062FA82BFA87D0000D307F /* SwingDetectApp.swift in Sources */,
 				7A062FD62BFA8955000D307F /* SensorsData.swift in Sources */,
 			);
