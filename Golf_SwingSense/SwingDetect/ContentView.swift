@@ -49,7 +49,7 @@ struct ContentView: View {
                     Text("X: \(String(format: "%.1f", motionManager.magnetometerData.x)), Y: \(String(format: "%.1f", motionManager.magnetometerData.y)), Z: \(String(format: "%.1f", motionManager.magnetometerData.z))")
                 }
             }
-
+            ButtonView()
         }
         .padding()
         .onAppear(){

@@ -13,6 +13,7 @@
 		7A062FB02BFA87D2000D307F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A062FAF2BFA87D2000D307F /* Preview Assets.xcassets */; };
 		7A062FD62BFA8955000D307F /* SensorsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A062FD52BFA8955000D307F /* SensorsData.swift */; };
 		7A062FD82BFA8BEE000D307F /* SegmentationSwing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A062FD72BFA8BEE000D307F /* SegmentationSwing.swift */; };
+		7A1DC7652C03A01F0029BB74 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DC7642C03A01F0029BB74 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		7A062FBF2BFA87D2000D307F /* SwingDetectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwingDetectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A062FD52BFA8955000D307F /* SensorsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorsData.swift; sourceTree = "<group>"; };
 		7A062FD72BFA8BEE000D307F /* SegmentationSwing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentationSwing.swift; sourceTree = "<group>"; };
+		7A1DC7642C03A01F0029BB74 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,13 +72,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		173FD7222BFACF2000C599CF /* Front */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Front;
-			sourceTree = "<group>";
-		};
 		7A062F9B2BFA87D0000D307F = {
 			isa = PBXGroup;
 			children = (
@@ -98,7 +93,7 @@
 		7A062FA62BFA87D0000D307F /* SwingDetect */ = {
 			isa = PBXGroup;
 			children = (
-				173FD7222BFACF2000C599CF /* Front */,
+				7A1DC7642C03A01F0029BB74 /* ButtonView.swift */,
 				7A062FD22BFA8889000D307F /* SensorsSwing */,
 				7A062FA72BFA87D0000D307F /* SwingDetectApp.swift */,
 				7A062FA92BFA87D0000D307F /* ContentView.swift */,
@@ -258,6 +253,7 @@
 			files = (
 				7A062FD82BFA8BEE000D307F /* SegmentationSwing.swift in Sources */,
 				7A062FAA2BFA87D0000D307F /* ContentView.swift in Sources */,
+				7A1DC7652C03A01F0029BB74 /* ButtonView.swift in Sources */,
 				7A062FA82BFA87D0000D307F /* SwingDetectApp.swift in Sources */,
 				7A062FD62BFA8955000D307F /* SensorsData.swift in Sources */,
 			);
@@ -420,7 +416,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SwingDetect/Preview Content\"";
-				DEVELOPMENT_TEAM = 5HTBBBGAM5;
+				DEVELOPMENT_TEAM = 4PPD777XXG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -462,7 +458,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SwingDetect/Preview Content\"";
-				DEVELOPMENT_TEAM = 5HTBBBGAM5;
+				DEVELOPMENT_TEAM = 4PPD777XXG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

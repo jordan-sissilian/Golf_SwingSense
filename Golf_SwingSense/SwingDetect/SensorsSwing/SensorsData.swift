@@ -107,7 +107,7 @@ class SensorsData: ObservableObject {
     }
     
     func printDat() {
-        print("\(String(format: "%.1f", posData.x)) \(String(format: "%.1f", posData.y)) \(String(format: "%.1f", posData.z))")
+      //  print("\(String(format: "%.1f", posData.x)) \(String(format: "%.1f", posData.y)) \(String(format: "%.1f", posData.z))")
     }
 
     func stopUpdates() {
