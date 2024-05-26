@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Default_rectangle_width_image_of_the_golf_course_with_trees_sk_7.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

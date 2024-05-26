@@ -11,7 +11,6 @@
 		7A062FA82BFA87D0000D307F /* SwingDetectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A062FA72BFA87D0000D307F /* SwingDetectApp.swift */; };
 		7A062FAA2BFA87D0000D307F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A062FA92BFA87D0000D307F /* ContentView.swift */; };
 		7A062FAC2BFA87D2000D307F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A062FAB2BFA87D2000D307F /* Assets.xcassets */; };
-		7A062FB02BFA87D2000D307F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A062FAF2BFA87D2000D307F /* Preview Assets.xcassets */; };
 		7A062FD62BFA8955000D307F /* SensorsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A062FD52BFA8955000D307F /* SensorsData.swift */; };
 		7A062FD82BFA8BEE000D307F /* SegmentationSwing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A062FD72BFA8BEE000D307F /* SegmentationSwing.swift */; };
 /* End PBXBuildFile section */
@@ -40,7 +39,6 @@
 		7A062FA92BFA87D0000D307F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7A062FAB2BFA87D2000D307F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A062FAD2BFA87D2000D307F /* SwingDetect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwingDetect.entitlements; sourceTree = "<group>"; };
-		7A062FAF2BFA87D2000D307F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7A062FB52BFA87D2000D307F /* SwingDetectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwingDetectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A062FBF2BFA87D2000D307F /* SwingDetectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwingDetectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A062FD52BFA8955000D307F /* SensorsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorsData.swift; sourceTree = "<group>"; };
@@ -107,17 +105,8 @@
 				7A062FA92BFA87D0000D307F /* ContentView.swift */,
 				7A062FAB2BFA87D2000D307F /* Assets.xcassets */,
 				7A062FAD2BFA87D2000D307F /* SwingDetect.entitlements */,
-				7A062FAE2BFA87D2000D307F /* Preview Content */,
 			);
 			path = SwingDetect;
-			sourceTree = "<group>";
-		};
-		7A062FAE2BFA87D2000D307F /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				7A062FAF2BFA87D2000D307F /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		7A062FD22BFA8889000D307F /* SensorsSwing */ = {
@@ -233,7 +222,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A062FB02BFA87D2000D307F /* Preview Assets.xcassets in Resources */,
 				7A062FAC2BFA87D2000D307F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,10 +422,12 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -476,10 +466,12 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
