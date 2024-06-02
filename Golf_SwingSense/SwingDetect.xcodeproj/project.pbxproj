@@ -7,14 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17247BB92C0B865600BC189B /* Vent.wav in Resources */ = {isa = PBXBuildFile; fileRef = 17247BAC2C0B865600BC189B /* Vent.wav */; };
+		17247BBA2C0B865600BC189B /* Applose2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 17247BAD2C0B865600BC189B /* Applose2.wav */; };
+		17247BBB2C0B865600BC189B /* Top.wav in Resources */ = {isa = PBXBuildFile; fileRef = 17247BAE2C0B865600BC189B /* Top.wav */; };
+		17247BBC2C0B865600BC189B /* Top2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 17247BAF2C0B865600BC189B /* Top2.wav */; };
+		17247BBD2C0B865600BC189B /* Applose3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 17247BB02C0B865600BC189B /* Applose3.wav */; };
+		17247BBE2C0B865600BC189B /* Whoosh5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 17247BB12C0B865600BC189B /* Whoosh5.wav */; };
+		17247BBF2C0B865600BC189B /* send.wav in Resources */ = {isa = PBXBuildFile; fileRef = 17247BB22C0B865600BC189B /* send.wav */; };
+		17247BC02C0B865600BC189B /* Applose1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 17247BB32C0B865600BC189B /* Applose1.wav */; };
+		17247BC12C0B865600BC189B /* Whoosh1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 17247BB42C0B865600BC189B /* Whoosh1.wav */; };
+		17247BC22C0B865600BC189B /* Whoosh3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 17247BB52C0B865600BC189B /* Whoosh3.wav */; };
+		17247BC32C0B865600BC189B /* impact.wav in Resources */ = {isa = PBXBuildFile; fileRef = 17247BB62C0B865600BC189B /* impact.wav */; };
+		17247BC42C0B865600BC189B /* Whoosh4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 17247BB72C0B865600BC189B /* Whoosh4.wav */; };
+		17247BC52C0B865600BC189B /* Whoosh2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 17247BB82C0B865600BC189B /* Whoosh2.wav */; };
+		17544ADF2C0CC4D80001039F /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17544ADE2C0CC4D80001039F /* BottomView.swift */; };
+		17544AE12C0CC64D0001039F /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17544AE02C0CC64D0001039F /* TopView.swift */; };
+		17544AE32C0CC6A10001039F /* MiddleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17544AE22C0CC6A10001039F /* MiddleView.swift */; };
+		17544AE82C0CCCF40001039F /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17544AE72C0CCCF40001039F /* test.swift */; };
 		178537D52C03416200A6B3AC /* AcceuilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178537D42C03416200A6B3AC /* AcceuilView.swift */; };
 		178537D72C039AB100A6B3AC /* SwingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178537D62C039AB100A6B3AC /* SwingView.swift */; };
 		178537DA2C039E5300A6B3AC /* RoundedComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178537D92C039E5300A6B3AC /* RoundedComponent.swift */; };
 		7A062FA82BFA87D0000D307F /* SwingDetectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A062FA72BFA87D0000D307F /* SwingDetectApp.swift */; };
 		7A062FAA2BFA87D0000D307F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A062FA92BFA87D0000D307F /* ContentView.swift */; };
 		7A062FAC2BFA87D2000D307F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A062FAB2BFA87D2000D307F /* Assets.xcassets */; };
-		7A062FD62BFA8955000D307F /* SensorsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A062FD52BFA8955000D307F /* SensorsData.swift */; };
-		7A062FD82BFA8BEE000D307F /* SegmentationSwing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A062FD72BFA8BEE000D307F /* SegmentationSwing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +50,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		178537D42C03416200A6B3AC /* AcceuilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceuilView.swift; sourceTree = SOURCE_ROOT; };
-		178537D62C039AB100A6B3AC /* SwingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwingView.swift; path = "SwingDetect/Asset Img/SwingView.swift"; sourceTree = SOURCE_ROOT; };
+		17247BAC2C0B865600BC189B /* Vent.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Vent.wav; path = SwingDetect/Sound/Vent.wav; sourceTree = SOURCE_ROOT; };
+		17247BAD2C0B865600BC189B /* Applose2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Applose2.wav; path = SwingDetect/Sound/Applose2.wav; sourceTree = SOURCE_ROOT; };
+		17247BAE2C0B865600BC189B /* Top.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Top.wav; path = SwingDetect/Sound/Top.wav; sourceTree = SOURCE_ROOT; };
+		17247BAF2C0B865600BC189B /* Top2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Top2.wav; path = SwingDetect/Sound/Top2.wav; sourceTree = SOURCE_ROOT; };
+		17247BB02C0B865600BC189B /* Applose3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Applose3.wav; path = SwingDetect/Sound/Applose3.wav; sourceTree = SOURCE_ROOT; };
+		17247BB12C0B865600BC189B /* Whoosh5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Whoosh5.wav; path = SwingDetect/Sound/Whoosh5.wav; sourceTree = SOURCE_ROOT; };
+		17247BB22C0B865600BC189B /* send.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = send.wav; path = SwingDetect/Sound/send.wav; sourceTree = SOURCE_ROOT; };
+		17247BB32C0B865600BC189B /* Applose1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Applose1.wav; path = SwingDetect/Sound/Applose1.wav; sourceTree = SOURCE_ROOT; };
+		17247BB42C0B865600BC189B /* Whoosh1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Whoosh1.wav; path = SwingDetect/Sound/Whoosh1.wav; sourceTree = SOURCE_ROOT; };
+		17247BB52C0B865600BC189B /* Whoosh3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Whoosh3.wav; path = SwingDetect/Sound/Whoosh3.wav; sourceTree = SOURCE_ROOT; };
+		17247BB62C0B865600BC189B /* impact.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = impact.wav; path = SwingDetect/Sound/impact.wav; sourceTree = SOURCE_ROOT; };
+		17247BB72C0B865600BC189B /* Whoosh4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Whoosh4.wav; path = SwingDetect/Sound/Whoosh4.wav; sourceTree = SOURCE_ROOT; };
+		17247BB82C0B865600BC189B /* Whoosh2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Whoosh2.wav; path = SwingDetect/Sound/Whoosh2.wav; sourceTree = SOURCE_ROOT; };
+		17544ADE2C0CC4D80001039F /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BottomView.swift; path = SwingDetect/Front/SwingDetect/Front/Acceuil/BottomView.swift; sourceTree = SOURCE_ROOT; };
+		17544AE02C0CC64D0001039F /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TopView.swift; path = SwingDetect/Front/SwingDetect/Front/Acceuil/TopView.swift; sourceTree = SOURCE_ROOT; };
+		17544AE22C0CC6A10001039F /* MiddleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MiddleView.swift; path = SwingDetect/Front/SwingDetect/Front/Acceuil/MiddleView.swift; sourceTree = SOURCE_ROOT; };
+		17544AE72C0CCCF40001039F /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		178537D42C03416200A6B3AC /* AcceuilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AcceuilView.swift; path = SwingDetect/Front/SwingDetect/Front/Acceuil/AcceuilView.swift; sourceTree = SOURCE_ROOT; };
+		178537D62C039AB100A6B3AC /* SwingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwingView.swift; path = SwingDetect/Front/Swing/SwingView.swift; sourceTree = SOURCE_ROOT; };
 		178537D92C039E5300A6B3AC /* RoundedComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedComponent.swift; sourceTree = "<group>"; };
 		7A062FA42BFA87D0000D307F /* SwingDetect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwingDetect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A062FA72BFA87D0000D307F /* SwingDetectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwingDetectApp.swift; sourceTree = "<group>"; };
@@ -45,8 +77,6 @@
 		7A062FAD2BFA87D2000D307F /* SwingDetect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwingDetect.entitlements; sourceTree = "<group>"; };
 		7A062FB52BFA87D2000D307F /* SwingDetectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwingDetectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A062FBF2BFA87D2000D307F /* SwingDetectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwingDetectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A062FD52BFA8955000D307F /* SensorsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorsData.swift; sourceTree = "<group>"; };
-		7A062FD72BFA8BEE000D307F /* SegmentationSwing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentationSwing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +107,51 @@
 		173FD7222BFACF2000C599CF /* Front */ = {
 			isa = PBXGroup;
 			children = (
-				178537D42C03416200A6B3AC /* AcceuilView.swift */,
-				178537D62C039AB100A6B3AC /* SwingView.swift */,
+				17544AE62C0CC91F0001039F /* Swing */,
+				17544AE42C0CC6D20001039F /* Acceuil */,
+				17544AE72C0CCCF40001039F /* test.swift */,
 			);
 			path = Front;
+			sourceTree = "<group>";
+		};
+		17544AE42C0CC6D20001039F /* Acceuil */ = {
+			isa = PBXGroup;
+			children = (
+				17544AE02C0CC64D0001039F /* TopView.swift */,
+				17544AE22C0CC6A10001039F /* MiddleView.swift */,
+				17544ADE2C0CC4D80001039F /* BottomView.swift */,
+				178537D42C03416200A6B3AC /* AcceuilView.swift */,
+			);
+			name = Acceuil;
+			path = SwingDetect/Front/Acceuil;
+			sourceTree = "<group>";
+		};
+		17544AE52C0CC8240001039F /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				17247BB32C0B865600BC189B /* Applose1.wav */,
+				17247BAD2C0B865600BC189B /* Applose2.wav */,
+				17247BB02C0B865600BC189B /* Applose3.wav */,
+				17247BB62C0B865600BC189B /* impact.wav */,
+				17247BB22C0B865600BC189B /* send.wav */,
+				17247BAE2C0B865600BC189B /* Top.wav */,
+				17247BAF2C0B865600BC189B /* Top2.wav */,
+				17247BAC2C0B865600BC189B /* Vent.wav */,
+				17247BB42C0B865600BC189B /* Whoosh1.wav */,
+				17247BB82C0B865600BC189B /* Whoosh2.wav */,
+				17247BB52C0B865600BC189B /* Whoosh3.wav */,
+				17247BB72C0B865600BC189B /* Whoosh4.wav */,
+				17247BB12C0B865600BC189B /* Whoosh5.wav */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		17544AE62C0CC91F0001039F /* Swing */ = {
+			isa = PBXGroup;
+			children = (
+				178537D62C039AB100A6B3AC /* SwingView.swift */,
+			);
+			path = Swing;
 			sourceTree = "<group>";
 		};
 		178537D82C039E2800A6B3AC /* Componant */ = {
@@ -112,24 +183,15 @@
 		7A062FA62BFA87D0000D307F /* SwingDetect */ = {
 			isa = PBXGroup;
 			children = (
+				17544AE52C0CC8240001039F /* Sound */,
 				178537D82C039E2800A6B3AC /* Componant */,
 				173FD7222BFACF2000C599CF /* Front */,
-				7A062FD22BFA8889000D307F /* SensorsSwing */,
 				7A062FA72BFA87D0000D307F /* SwingDetectApp.swift */,
 				7A062FA92BFA87D0000D307F /* ContentView.swift */,
 				7A062FAB2BFA87D2000D307F /* Assets.xcassets */,
 				7A062FAD2BFA87D2000D307F /* SwingDetect.entitlements */,
 			);
 			path = SwingDetect;
-			sourceTree = "<group>";
-		};
-		7A062FD22BFA8889000D307F /* SensorsSwing */ = {
-			isa = PBXGroup;
-			children = (
-				7A062FD52BFA8955000D307F /* SensorsData.swift */,
-				7A062FD72BFA8BEE000D307F /* SegmentationSwing.swift */,
-			);
-			path = SensorsSwing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +298,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17247BC32C0B865600BC189B /* impact.wav in Resources */,
+				17247BBA2C0B865600BC189B /* Applose2.wav in Resources */,
+				17247BBC2C0B865600BC189B /* Top2.wav in Resources */,
+				17247BC12C0B865600BC189B /* Whoosh1.wav in Resources */,
+				17247BC22C0B865600BC189B /* Whoosh3.wav in Resources */,
+				17247BC42C0B865600BC189B /* Whoosh4.wav in Resources */,
+				17247BBE2C0B865600BC189B /* Whoosh5.wav in Resources */,
+				17247BC52C0B865600BC189B /* Whoosh2.wav in Resources */,
+				17247BC02C0B865600BC189B /* Applose1.wav in Resources */,
 				7A062FAC2BFA87D2000D307F /* Assets.xcassets in Resources */,
+				17247BBD2C0B865600BC189B /* Applose3.wav in Resources */,
+				17247BBB2C0B865600BC189B /* Top.wav in Resources */,
+				17247BBF2C0B865600BC189B /* send.wav in Resources */,
+				17247BB92C0B865600BC189B /* Vent.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,13 +336,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17544AE12C0CC64D0001039F /* TopView.swift in Sources */,
 				178537D52C03416200A6B3AC /* AcceuilView.swift in Sources */,
 				178537DA2C039E5300A6B3AC /* RoundedComponent.swift in Sources */,
-				7A062FD82BFA8BEE000D307F /* SegmentationSwing.swift in Sources */,
+				17544ADF2C0CC4D80001039F /* BottomView.swift in Sources */,
+				17544AE82C0CCCF40001039F /* test.swift in Sources */,
 				7A062FAA2BFA87D0000D307F /* ContentView.swift in Sources */,
+				17544AE32C0CC6A10001039F /* MiddleView.swift in Sources */,
 				178537D72C039AB100A6B3AC /* SwingView.swift in Sources */,
 				7A062FA82BFA87D0000D307F /* SwingDetectApp.swift in Sources */,
-				7A062FD62BFA8955000D307F /* SensorsData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
